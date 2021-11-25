@@ -25,11 +25,15 @@ then
 fi
 if [ $var_choice = "3" ]
 then
-  echo "Directory to search(Enter for current host):"
-  read var_dir
-  gobuster dir -u http://$var_host$var_dir -w /home/sidejack/Documents/tools/SecLists/Discovery/Web-Content/raft-medium-directories.txt
+  nmap -sU --top-ports 10 -sV $var_host
 fi
 if [ $var_choice = "4" ]
+then
+  echo "Directory to search(Enter for current host):"
+  read var_dir
+  gobuster dir -u http://$var_host$var_dir -x txt,php,html -w /home/sidejack/Documents/tools/SecLists/Discovery/Web-Content/raft-medium-directories.txt
+fi
+if [ $var_choice = "5" ]
 then
   dirbuster
 fi
