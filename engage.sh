@@ -7,8 +7,9 @@ read var_host
 echo "*-----------------------------------*"
 echo "* 1 - nmap -usual ports"
 echo "* 2 - namp -all ports"
-echo "* 3 - gobuster"
-echo "* 4 - dirbuster"
+echo "* 3 - nmap - UDP ports"
+echo "* 4 - gobuster"
+echo "* 5 - dirbuster"
 echo "*-----------------------------------*"
 read var_choice
 
@@ -32,6 +33,3 @@ if [ $var_choice = "4" ]
 then
   dirbuster
 fi
-
-
-
