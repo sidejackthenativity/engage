@@ -17,7 +17,7 @@ read var_choice
 
 if [ $var_choice = "1" ]
 then
-  nmap -sC -sV -A -v $var_host
+  nmap -sC -sV -A -v -oA $var_host"nmap" $var_host
 fi
 if [ $var_choice = "2" ]
 then
@@ -25,7 +25,7 @@ then
 fi
 if [ $var_choice = "3" ]
 then
-  nmap -sU --top-ports 10 -sV $var_host
+  sudo nmap -sU --top-ports 10 -sV -oA $var_host"UDPNMAP" $var_host
 fi
 if [ $var_choice = "4" ]
 then
