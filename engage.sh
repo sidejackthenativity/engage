@@ -17,11 +17,11 @@ read var_choice
 
 if [ $var_choice = "1" ]
 then
-  nmap -sC -sV -A -v -oA $var_host"nmap" $var_host
+  sudo nmap -sC -sV -A -v -oA $var_host"nmap" $var_host
 fi
 if [ $var_choice = "2" ]
 then
-  nmap -p- $var_host
+  sudo nmap -p- $var_host
 fi
 if [ $var_choice = "3" ]
 then
